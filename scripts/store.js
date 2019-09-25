@@ -5,15 +5,15 @@ let hideCheckedItems= false;
 
 
 const findById = function(id){
-  const foundItem = store.items.find( function(id) {
-  if(store.items.id === id){
-    console.log(id);
-    return id;
-  };
-});
-  console.log(foundItem);
-  foundItem.checked = !foundItem.checked;
+  const foundItem = this.items.find(function(item) {
+    if(item.id === id){
+      return true;
+    };
+  });
+  return foundItem;
 };
+
+//be consistent always call this.findById
 
 const addItem = function(name){
   try{
@@ -44,7 +44,16 @@ const findAndUpdateName = function(id, newName){
 
 const findAndDelete = function(id){
   const foundItem = this.findById(id);
-  const deleteItem = foundItem.filter(this.items);
+  //console.log(this.findIndex(id));
+  let indexOfFoundItem = items.findIndex(id => this.findById(id) === id);
+  console.log(indexOfFoundItem);
+  //foundItem.splice(foundItem.indexOf(id),1);
+  
+  // store.items.splice(store.items.indexOf(store.update),1); 
+//   a = [ {prop1:"abc",prop2:"qwe"}, {prop1:"bnmb",prop2:"yutu"}, {prop1:"zxvz",prop2:"qwrq"}];
+// index = a.findIndex(x => x.prop2 ==="yutu");
+// console.log(index);
+  
 }
 
 export default {
