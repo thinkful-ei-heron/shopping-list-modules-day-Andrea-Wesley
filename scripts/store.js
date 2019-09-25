@@ -53,9 +53,17 @@ const findAndDelete = function(id){
   
 };
 
+const toggleCheckedFilter = function(){
+  this.hideCheckedItems = !this.hideCheckedItems;
+};
+
+
+
+
 export default {
   items,
   hideCheckedItems,
+  toggleCheckedFilter,
   findById,
   addItem,
   findAndToggleChecked,
