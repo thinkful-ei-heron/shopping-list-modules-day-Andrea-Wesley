@@ -148,7 +148,6 @@ const bindEventListeners = function () {
   handleEditShoppingItemSubmit();
   handleToggleFilterClick();
 };
-
 // This object contains the only exposed methods from this module:
 export default {
   render,
