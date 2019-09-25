@@ -3,12 +3,11 @@ import item from './item.js';
 let items =  [];
 let hideCheckedItems= false;
 
+
 const findById = function(id){
-  this.items.find( function (id){
-    if (this.items.id === id){
-      return id;
-    }
-  });
+  const foundItem = items.find( items.id , item.id === id);
+  alert('this ran');
+  foundItem.checked = !foundItem.checked;
 };
 
 const addItem = function(name){
@@ -23,14 +22,15 @@ const addItem = function(name){
 };
 
 const findAndToggleChecked = function(id){
-  let hideChecked = this.findById(id).hideCheckedItems;
-  hideChecked = !hideCheckedItems;
+  let findHidden = this.findById(id);
+  findHidden.checked = !findHidden.checked ;
 };
 
 export default {
   items,
   hideCheckedItems,
   findById,
+  addItem,
   findAndToggleChecked
 };
 

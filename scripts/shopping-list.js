@@ -49,7 +49,7 @@ const addItemToShoppingList = function (itemName) {
     item.validateName(itemName);
     let newItem= item.create(itemName);
     store.items.push(newItem);
-    console.log(newItem);
+    //console.log(newItem);
     
   }
   catch(error){
