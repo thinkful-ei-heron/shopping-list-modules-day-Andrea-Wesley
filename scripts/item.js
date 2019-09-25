@@ -1,5 +1,5 @@
 const validateName = function(name){
-  if (name === null){
+  if (!name){
     throw TypeError('Name must not be blank');
   }
 };
@@ -11,7 +11,6 @@ const create = function(name){
     checked: false
   };
 };
-
 
 export default {
   validateName,
