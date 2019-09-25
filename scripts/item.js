@@ -1,2 +1,20 @@
+const validateName = function(name){
+  if (name === null){
+    throw TypeError('Name must not be blank');
+  }
+};
 
-export default {};
+
+const create = function(name){
+  return {
+    id: cuid(),
+    name: name,
+    checked: false
+  };
+};
+
+
+export default {
+  validateName,
+  create
+};

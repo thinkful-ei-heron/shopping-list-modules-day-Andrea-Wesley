@@ -1,3 +1,4 @@
+
 const generateItemElement = function (item) {
   let itemTitle = `<span class="shopping-item shopping-item__checked">${item.name}</span>`;
   if (!item.checked) {
@@ -140,5 +141,5 @@ export default {
   bindEventListeners
 };
 import store from './store.js';
+import item from './import.js';
 
-import item from './item.js';
