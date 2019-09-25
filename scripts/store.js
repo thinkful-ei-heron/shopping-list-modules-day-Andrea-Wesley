@@ -3,6 +3,9 @@ const store = {
   hideCheckedItems: false
 };
 
+import item from './item.js';
+
 export default {
   store
 };
+

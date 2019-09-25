@@ -140,3 +140,5 @@ export default {
   bindEventListeners
 };
 import store from './store.js';
+
+import item from './item.js';
