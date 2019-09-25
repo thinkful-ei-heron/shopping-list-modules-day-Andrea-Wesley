@@ -1,11 +1,11 @@
-const store = {
-  items: [],
-  hideCheckedItems: false
-};
-
 import item from './item.js';
 
+let items =  [];
+let hideCheckedItems= false;
+
+
 export default {
-  store
+  items,
+  hideCheckedItems
 };
 

@@ -3,7 +3,7 @@ import item from './item.js';
 import store from './store.js';
 
 const main = function () {
-  const itemName = ['','apples',];
+  const itemNames = ['','apples',];
   itemNames.forEach( name => {
     try {
       item.validateName(name);
@@ -13,7 +13,7 @@ const main = function () {
       console.log(`Cannot add items: ${error.message}`);
     }
   });
-  
+
   shoppingList.bindEventListeners();
   shoppingList.render();
 };
