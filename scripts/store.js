@@ -43,18 +43,15 @@ const findAndUpdateName = function(id, newName){
 };
 
 const findAndDelete = function(id){
-  const foundItem = this.findById(id);
-  //console.log(this.findIndex(id));
-  let indexOfFoundItem = items.findIndex(id => this.findById(id) === id);
-  console.log(indexOfFoundItem);
-  //foundItem.splice(foundItem.indexOf(id),1);
+  let indexOfFoundItem = this.items.findIndex(item => function(item) {
+    if(item.id === id){
+      return true;
+    };
+  });
   
-  // store.items.splice(store.items.indexOf(store.update),1); 
-//   a = [ {prop1:"abc",prop2:"qwe"}, {prop1:"bnmb",prop2:"yutu"}, {prop1:"zxvz",prop2:"qwrq"}];
-// index = a.findIndex(x => x.prop2 ==="yutu");
-// console.log(index);
+  this.items.splice(indexOfFoundItem,1);
   
-}
+};
 
 export default {
   items,
